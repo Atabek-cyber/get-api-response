@@ -1,0 +1,30 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // for JSON parsing
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+}
+
+application {
+    // your main class’s fully-qualified name
+    mainClass = 'com.example.HttpBinClient'
+}
+
+// Generate a local wrapper so anyone can build without a global Gradle install
+// task wrapper(type: Wrapper) {
+//     gradleVersion = '8.12'
+// }
+
+wrapper {
+    gradleVersion = '8.12'
+}
